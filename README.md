@@ -1,6 +1,6 @@
 # Injury-types-and-Rehabilitational-Programs
 
-:flashlight: Tools Used for Project:
+:flashlight: **Tools Used for Project**:
 - SQLite
 - Excel
 - Kaggle
@@ -8,7 +8,7 @@
 - Power Query
 - Pivot Tables
 
- :chart: Objective and Steps of Project:
+ :chart: **Objective and Steps of Project:**
 - Optimized and clean Kaggle dataset revolving around Basketball player injuries by type, severity and rehabiliational programs used.
 - Determined which rehabiliational programs resulted in less frequent reoccuring injuries and displayed the best signs of growth.
 - Utilized SQLite to extract and group information from the Kaggle dataset.
@@ -16,7 +16,7 @@
 - Imported data from Excel to Power BI and further modify in Power Query.
 - Created an interactive dashboard showcasing results of rehabilitational programs by injury types, injury reoccurences, and injury severity.
 
-:thought_balloon: Findings:
+:thought_balloon: **Findings:**
 - Average age of Basketball players examined was roughly 25.48
 - Injury severity most classified within the data was "Severe", followed by "Moderate" and "Mild"
 - Rehabilitaional programs which showcased the least amount of injury reoccurence after treatment was as followed:
@@ -26,6 +26,8 @@
   4. Strength Training
 -  Full grown adults ages 28 and above showcased the most injuries, followed by Young adults ages 23-27, and lastly by Adolescents ages 22 and under.
 -  Overall Physiotherapy rehabilitation showcased the least amount of overall injury reoccurence after treatment within all the age brackets and injury types. Which can be deemd from the overall objective of recuperating body function over strengthening the body in a weakend and vulnerable state.
+
+:camera: **Screenshots of Project:** 
 
 Original Data:
 <img width="1918" height="973" alt="Original Kaggle Data" src="https://github.com/user-attachments/assets/87e104d7-268f-4031-875d-9963770181e9" />
