@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="Basketball injury project.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser query pragmas" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2862"/><column_width id="4" width="0"/><expanded_item id="0" parent="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="basketball_injury_biomechanical_dataset" custom_title="0" dock_id="1" table="4,39:mainbasketball_injury_biomechanical_dataset"/><dock_state state="000000ff00000000fd00000001000000020000038b000003b5fc0100000001fb000000160064006f0063006b00420072006f007700730065003101000000000000038b0000016200ffffff0000038b0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="basketball_injury_biomechanical_dataset" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="64"/><column index="2" value="35"/><column index="3" value="69"/><column index="4" value="69"/><column index="5" value="63"/><column index="6" value="167"/><column index="7" value="98"/><column index="8" value="175"/><column index="9" value="165"/><column index="10" value="115"/><column index="11" value="95"/><column index="12" value="186"/><column index="13" value="135"/><column index="14" value="135"/><column index="15" value="135"/><column index="16" value="135"/><column index="17" value="135"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">SELECT * FROM basketball_injury_biomechanical_dataset;
+
+--- First I wanted to see the injuries by position and see common links ---
+SELECT Position, Injury_Type, Injury_Severity
+FROM basketball_injury_biomechanical_dataset
+ORDER BY Position;
+--- Was able to identify the Individual positions alongside the injkuries and severity of injuries ---
+
+
+-----------------------------------------------------------------------------------------------------------
+SELECT Position, Injury_Type, Injury_Severity, COUNT(Position) AS &quot;Total Injuries&quot;
+FROM basketball_injury_biomechanical_dataset
+GROUP BY Position;
+--- By grouping the position we can see the total number of injuries based off position ---
+--- 36 Injuries for the Centers, 29 for Forwards, and 35 for Guards ----
+--- The Fowards showed the least amount of injuries, meanwhile the Centers and Guards had almost identical amount of injuries ---
+
+---- Counting the Injury type based off of Injury Severity ---
+SELECT Injury_Type, Injury_Severity, COUNT (Injury_Type)
+FROM basketball_injury_biomechanical_dataset
+GROUP BY Injury_Type;
+----
+---- 
+
+
+SELECT Rehabilitation_Program AS &quot;Rehabilitation Program&quot;, COUNT(Rehabilitation_Program) AS &quot;Total of Injuries for Program&quot; 
+FROM basketball_injury_biomechanical_dataset
+GROUP BY Rehabilitation_Program;
+
+
+--- Will now be looking at the Injury Type per Individual Position ---
+--- Will be looking towards the Center players who showed 36 total Injuries ---
+SELECT Position, Injury_Type
+FROM basketball_injury_biomechanical_dataset
+WHERE Position = &quot;Center&quot;
+ORDER BY Injury_Type;
+--- Identified 5 different types of injuries ----
+
+--- Will now count how many of each injury types there are --- 
+SELECT Position, Injury_Type, COUNT(Injury_Type) AS &quot;Number of Injuries&quot;
+FROM basketball_injury_biomechanical_dataset
+WHERE Position = &quot;Center&quot;
+GROUP BY Injury_Type;
+--- Results showed 6 ACL Tears, 6 Ankle Sprains, 6 Hamstring Strains, 10 Knee Injuries, and finally 8 Shoulder Dislocations ---
+
+--- Looking at the ACL Tears, we can Identify 2 Injury Severity, them being Moderate = 2 and Severe = 4 ---
+SELECT Position, Injury_Type, Injury_Severity, Rehabilitation_Program
+FROM basketball_injury_biomechanical_dataset
+WHERE Position = &quot;Center&quot; AND Injury_Type = &quot;ACL Tear&quot;
+ORDER BY Injury_Severity;
+
+--- Ankle Sprain: Mild = 1, Moderate = 4, and Severe = 1 ---- 
+SELECT Position, Injury_Type, Injury_Severity
+FROM basketball_injury_biomechanical_dataset
+WHERE Position = &quot;Center&quot; AND Injury_Type = &quot;Ankle Sprain&quot;
+ORDER BY Injury_Severity;
+
+--- Hamstring Strain: Mild = 2, and Severe = 4 ----- 
+SELECT Position, Injury_Type, Injury_Severity
+FROM basketball_injury_biomechanical_dataset
+WHERE Position = &quot;Center&quot; AND Injury_Type = &quot;Hamstring Strain&quot;
+ORDER BY Injury_Severity;
+
+--- Knee Injury: Mild = 1, Moderate = 4, Severe = 5 ----
+SELECT Position, Injury_Type, Injury_Severity
+FROM basketball_injury_biomechanical_dataset
+WHERE Position = &quot;Center&quot; AND Injury_Type = &quot;Knee Injury&quot;
+ORDER BY Injury_Severity;
+
+--- Shoulder Dislocation: Mild = 4, Moderate = 1, Severe = 3 ----
+SELECT Position, Injury_Type, Injury_Severity
+FROM basketball_injury_biomechanical_dataset
+WHERE Position = &quot;Center&quot; AND Injury_Type = &quot;Shoulder Dislocation&quot;
+ORDER BY Injury_Severity;
+--------------------------------------------------------------------------
+SELECT Rehabilitation_Program, Injury_Type
+FROM basketball_injury_biomechanical_dataset
+ORDER BY Injury_Type;
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
