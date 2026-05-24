@@ -8,7 +8,7 @@
 - Power Query
 - Pivot Tables
 
- :chart: **Objective and Steps of Project:**
+:bar_chart: **Objective and Steps of Project:**
 - Optimized and clean Kaggle dataset revolving around Basketball player injuries by type, severity and rehabiliational programs used.
 - Determined which rehabiliational programs resulted in less frequent reoccuring injuries and displayed the best signs of growth.
 - Utilized SQLite to extract and group information from the Kaggle dataset.
