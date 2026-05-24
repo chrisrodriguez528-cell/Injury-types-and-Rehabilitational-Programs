@@ -1,4 +1,4 @@
-# Injury-types-and-Rehabilitational-Programs Project
+# Injury types and Rehabilitational Programs Project (Most Recent Project)
 
 :flashlight: **Tools Used for Project**:
 - SQLite
