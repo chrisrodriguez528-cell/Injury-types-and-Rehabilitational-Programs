@@ -25,7 +25,7 @@
   3. Flexibility Exercises
   4. Strength Training
 -  Full grown adults ages 28 and above showcased the most injuries, followed by Young adults ages 23-27, and lastly by Adolescents ages 22 and under.
--  Overall Physiotherapy rehabilitation showcased the least amount of overall injury reoccurence after treatment within all the age brackets and injury types. Which can be deemed from the overall objective of recuperating body function over strengthening the body in a weakend and vulnerable state.
+-  Overall Physiotherapy rehabilitation showcased the least amount of overall injury reoccurence after treatment within all the age brackets and injury types. Which can be deemed from the overall objective of recuperating body function over strengthening the body in a weakened and vulnerable state.
 
 :camera: **Screenshots of Project:** 
 
